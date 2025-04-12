@@ -3,211 +3,125 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BrightNest Edu — Launching Soon</title>
+  <title>BrightNest Edu — Where Young Minds Take Flight</title>
+  <meta name="description" content="BrightNest Edu offers one-on-one online classes for kids aged 3–8 in Phonics, Maths, and Hindi. Fun, interactive, and personalized learning.">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --brand-primary: #1a2b49;
-      --brand-accent: #3a4f7a;
+      --primary-color: #1a2b49;
+      --accent-color: #fbbf24;
       --bg-light: #fefce8;
-      --card-yellow: #fff3cd;
-      --whatsapp-green: #25d366;
-      --whatsapp-hover: #1ebe57;
+      --button-color: #25d366;
+      --button-hover: #1ebe57;
     }
 
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
-    html, body {
+    body {
       font-family: 'Poppins', sans-serif;
       background-color: var(--bg-light);
-      color: #333;
+      color: var(--primary-color);
       text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 20px;
-      overflow-x: hidden;
+      padding: 40px 20px;
     }
 
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-bottom: 1rem;
-      animation: fadeIn 1.5s ease;
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
     }
 
-    header img {
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      border: 2px solid var(--brand-primary);
-    }
-
-    header h1 {
-      font-size: 2.4em;
-      color: var(--brand-primary);
-    }
-
-    .tagline {
-      font-style: italic;
-      color: #666;
-      margin-bottom: 20px;
-      font-size: 1.1em;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      animation: fadeIn 2s ease;
-    }
-
-    .paper-plane {
-      width: 30px;
-      animation: fly 3s infinite ease-in-out;
-    }
-
-    @keyframes fly {
-      0% { transform: translateX(0) rotate(0); }
-      50% { transform: translateX(15px) translateY(-10px) rotate(10deg); }
-      100% { transform: translateX(0) rotate(0); }
-    }
-
-    .coming-soon {
-      font-size: 3em;
-      font-weight: bold;
-      background: linear-gradient(270deg, var(--brand-primary), var(--brand-accent));
-      background-size: 400% 400%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: wave 4s ease infinite, hoverUp 2s infinite alternate;
-      margin: 20px 0;
-    }
-
-    @keyframes wave {
-      0%, 100% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-    }
-
-    @keyframes hoverUp {
-      from { transform: translateY(0); }
-      to { transform: translateY(-6px); }
-    }
-
-    .description {
-      max-width: 600px;
-      font-size: 1em;
-      margin-bottom: 24px;
-      animation: fadeIn 2s ease;
-    }
-
-    .courses {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      justify-content: center;
+    h2 {
+      font-size: 1.5em;
+      font-weight: 400;
       margin-bottom: 30px;
-      animation: fadeIn 2s ease;
+      color: #555;
     }
 
-    .course-card {
-      background-color: var(--card-yellow);
-      padding: 14px 24px;
-      border-radius: 14px;
-      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
-      font-weight: bold;
-      font-size: 1em;
+    .buttons {
+      margin-bottom: 40px;
     }
 
-    .whatsapp-btn {
-      background-color: var(--whatsapp-green);
+    .btn {
+      background-color: var(--button-color);
       color: white;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 12px 30px;
-      border-radius: 30px;
+      padding: 12px 24px;
+      margin: 0 10px;
+      border: none;
+      border-radius: 8px;
       font-size: 1em;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      animation: fadeIn 2s ease;
+      cursor: pointer;
+      transition: background 0.3s;
     }
 
-    .whatsapp-btn:hover {
-      background-color: var(--whatsapp-hover);
-      transform: scale(1.05);
+    .btn:hover {
+      background-color: var(--button-hover);
     }
 
-    .whatsapp-icon {
-      width: 20px;
-      height: 20px;
+    .features {
+      max-width: 600px;
+      margin: 0 auto 40px;
+      text-align: left;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    .features li {
+      margin: 10px 0;
+      font-size: 1.1em;
     }
 
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2em;
-      }
-      .coming-soon {
-        font-size: 2.4em;
-      }
-      .description, .course-card, .whatsapp-btn {
-        font-size: 0.95em;
-      }
+    .how-it-works {
+      background-color: #fff3cd;
+      padding: 30px;
+      border-radius: 10px;
+      margin-bottom: 40px;
     }
 
-    @media (max-width: 480px) {
-      .coming-soon {
-        font-size: 2em;
-      }
-      .paper-plane {
-        width: 24px;
-      }
+    .testimonial {
+      font-style: italic;
+      color: #444;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #777;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>BrightNest</h1>
-    <img src="brightnest-logo.png" alt="BrightNest Logo" />
-    <h1>Education</h1>
-  </header>
 
-  <p class="tagline">
-    "Where little minds take flight"
-    <img src="Paper Plane.gif" alt="Flying Paper Plane" class="paper-plane" />
-  </p>
+  <h1>BrightNest Edu</h1>
+  <h2>Where Young Minds Take Flight</h2>
 
-  <h2 class="coming-soon">COMING SOON</h2>
-
-  <p class="description">
-    BrightNest Edu is a one-on-one online learning platform crafted for young minds. We're launching soon with engaging courses tailored for children aged 3 to 8.
-  </p>
-
-  <div class="courses">
-    <div class="course-card">Phonics</div>
-    <div class="course-card">Maths</div>
-    <div class="course-card">Master Mathematics</div>
-    <div class="course-card">Hindi</div>
+  <div class="buttons">
+    <button class="btn">Join Waitlist</button>
+    <button class="btn" onclick="window.open('https://wa.me/yourwhatsapplink', '_blank')">WhatsApp Us</button>
   </div>
 
-  <p class="description">Have questions or want to connect with us?</p>
+  <ul class="features">
+    <li>1-on-1 live sessions</li>
+    <li>Designed by early childhood experts</li>
+    <li>Interactive activities and storytelling</li>
+    <li>Flexible timings for busy parents</li>
+  </ul>
 
-  <a href="https://wa.me/+918958272149" class="whatsapp-btn">
-    <img src="Whatsapp-icon.png" alt="WhatsApp Icon" class="whatsapp-icon" />
-    Chat on WhatsApp
-  </a>
+  <div class="how-it-works">
+    <h3>How It Works</h3>
+    <ol>
+      <li>Choose a subject</li>
+      <li>Meet your teacher</li>
+      <li>Start learning!</li>
+    </ol>
+  </div>
+
+  <p class="testimonial">"My child started reading within weeks! Thank you BrightNest!" — A Happy Parent</p>
+
+  <footer>
+    &copy; 2025 BrightNest Edu. All rights reserved.
+  </footer>
+
 </body>
 </html>
