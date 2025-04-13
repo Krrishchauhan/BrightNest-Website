@@ -2,29 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BrightNest Edu — Where Young Minds Take Flight</title>
-
-  <!-- SEO -->
-  <meta name="description" content="BrightNest Edu offers online classes for kids aged 3–15 in Phonics, English, Vedic Math, and Hindi.">
-  <meta name="keywords" content="online kids classes, phonics, english, vedic math, Hindi for kids">
-
-  <!-- Fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="shortcut icon" href="favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-  <link rel="manifest" href="site.webmanifest" />
-
+  <meta name="description" content="BrightNest Edu offers interactive, one-on-one online classes for ages 3–8 in Phonics, Math, and Hindi.">
+  <meta name="keywords" content="online kids classes, phonics, vedic math, Hindi for kids, BrightNest Edu">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <style>
     :root {
+      --primary: #ffb347;
+      --secondary: #74b9ff;
       --navy: #1a2b49;
-      --pink: #ffd1dc;
-      --bg: #fefce8;
-      --accent: #fbbf24;
+      --blue-dark: #0a2540;
+      --light-bg: #fefce8;
+      --white: #fff;
+      --dark: #333;
     }
 
     * {
@@ -34,198 +26,168 @@
     }
 
     body {
-      font-family: 'Poppins', sans-serif;
-      background-color: var(--bg);
-      color: #333;
+      font-family: 'Fredoka', sans-serif;
+      background-color: var(--light-bg);
+      color: var(--dark);
+      line-height: 1.6;
     }
 
     header {
-      background-color: var(--navy);
-      color: white;
+      background-color: var(--secondary);
+      color: var(--white);
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
-    header img {
-      height: 50px;
-      border-radius: 50%;
-    }
-
     nav a {
-      color: white;
+      color: var(--white);
       margin-left: 20px;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: bold;
     }
 
     .hero {
+      background: #c8e6f9;
       text-align: center;
       padding: 4rem 2rem;
-      background: linear-gradient(135deg, var(--pink), var(--accent));
+      position: relative;
     }
 
     .hero h1 {
-      font-size: 2.5rem;
-      color: var(--navy);
-      margin-bottom: 1rem;
+      font-size: 2.8rem;
+      color: var(--blue-dark);
     }
 
     .hero p {
-      font-style: italic;
       font-size: 1.2rem;
-      margin-bottom: 2rem;
+      color: #444;
+      max-width: 600px;
+      margin: 1rem auto;
     }
 
     .hero img {
-      width: 140px;
-      margin: 1rem 0;
-      animation: float 3s ease-in-out infinite;
+      width: 300px;
+      margin-top: 2rem;
     }
 
     .btn {
-      background-color: var(--navy);
-      color: white;
-      padding: 0.75rem 1.5rem;
+      background-color: var(--primary);
+      color: #fff;
+      padding: 0.8rem 1.5rem;
       border: none;
       border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
       text-decoration: none;
+      font-weight: bold;
+      margin-top: 1.5rem;
+      display: inline-block;
     }
 
-    .courses {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      padding: 3rem 2rem;
-    }
-
-    .course-card {
-      background-color: white;
-      border-radius: 12px;
-      padding: 2rem;
-      width: 300px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    .section {
+      padding: 4rem 2rem;
       text-align: center;
     }
 
-    .course-card h3 {
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--navy);
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .card {
+      background-color: var(--white);
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 300px;
+      padding: 2rem;
+      text-align: left;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
       color: var(--navy);
       margin-bottom: 0.5rem;
     }
 
-    .course-card p {
-      margin: 0.5rem 0;
+    .card p {
+      margin-bottom: 1rem;
     }
 
-    .whatsapp {
-      display: inline-block;
-      margin-top: 1rem;
-      background-color: #25D366;
-      color: white;
-      padding: 0.6rem 1rem;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
+    .card .btn {
+      background-color: var(--primary);
+      color: #fff;
     }
 
     footer {
-      text-align: center;
-      padding: 2rem 1rem;
       background-color: var(--navy);
-      color: white;
-      margin-top: 3rem;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <div class="brand">
-      <img src="brightnest-logo.png" alt="BrightNest Logo">
-    </div>
+    <h1>BrightNest Edu</h1>
     <nav>
-      <a href="#courses">Courses</a>
-      <a href="#contact">Contact</a>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Classes</a>
+      <a href="#">Contact</a>
     </nav>
   </header>
 
   <section class="hero">
-    <h1>Where Young Minds Take Flight</h1>
-    <p>BrightNest Edu offers interactive, one-on-one online classes for ages 3–15 in Phonics, English, Math, and Hindi.</p>
-
-    <!-- 👦 Cartoon Kid Image -->
-    <img src="https://cdn.pixabay.com/photo/2020/05/18/22/28/kid-5190870_960_720.png" alt="Happy Cartoon Kid" />
-
-    <br/>
-    <a class="btn" href="https://wa.me/918958272149?text=Hello%2C%20I%20want%20to%20enroll%20my%20child">Chat on WhatsApp</a>
+    <h1>Let's Become More Creative with BrightNest</h1>
+    <p>A magical place to share, learn, and grow through fun, play, and personalized online learning.</p>
+    <img src="https://cdn.pixabay.com/photo/2020/05/18/22/28/kid-5190870_960_720.png" alt="Happy Kid" />
+    <a class="btn" href="https://wa.me/918958272149">Let's Explore</a>
   </section>
 
-  <section id="courses" class="courses">
-    <div class="course-card">
-      <h6>Beginners Phonics </h6>
-      <h3>English</h3>
-      <h3>Mathematics</h3>
-      <p>Age: 3-4 </p>
-      <p>Online | One-on-One</p>
-      <a class="whatsapp" href="https://wa.me/918958272149?text=I'm%20interested%20in%20Phonics%20classes%20on%20BrightNest%20Edu">Enroll Now</a>
-    </div>
-    
-    <div class="course-card">
-      <h6>Junior Phonics </h6>
-      <h3>English</h3>
-      <h3>Mathematics</h3>
-      <p>Age: 4-6 </p>
-      <p>Online | One-on-One</p>
-      <a class="whatsapp" href="https://wa.me/918958272149?text=I'm%20interested%20in%20Phonics%20classes%20on%20BrightNest%20Edu">Enroll Now</a>
-    </div>
-
-    <div class="course-card">
-      <h6>Class 1-5</h6>
-      <h3>English</h3>
-      <h3>Mathematics</h3>
-      <p>Age: 6-11 </p>
-      <p>Online | One-on-One</p>
-      <a class="whatsapp" href="https://wa.me/918958272149?text=I'm%20interested%20in%20Vedic%20Math%20classes%20on%20BrightNest%20Edu">Enroll Now</a>
-    </div>
-    
-    <div class="course-card">
-      <h6>Class 6-8</h6>
-      <h3>English</h3>
-      <h3>Mathematics</h3>
-      <p>Age: 11-15 </p>
-      <p>Online | One-on-One</p>
-      <a class="whatsapp" href="https://wa.me/918958272149?text=I'm%20interested%20in%20Vedic%20Math%20classes%20on%20BrightNest%20Edu">Enroll Now</a>
-    </div>
-    
-    <div class="course-card">
-      <h3>Vedic Math Magic</h3>
-      <p>Age: Any Age </p>
-      <p>Online | One-on-One</p>
-      <a class="whatsapp" href="https://wa.me/918958272149?text=I'm%20interested%20in%20Vedic%20Math%20classes%20on%20BrightNest%20Edu">Enroll Now</a>
-    </div>
-        
-    <div class="course-card">
-      <h6>Hindi</h6>
-      <h3>Basic Understanding </h3>
-      <p>Age: Any Age years</p>
-      <p>Online | One-on-One</p>
-      <a class="whatsapp" href="https://wa.me/918958272149?text=I'm%20interested%20in%20Hindi%20classes%20on%20BrightNest%20Edu">Enroll Now</a>
+  <section class="section">
+    <h2>Happy Childhood Memories Start Here</h2>
+    <p>Explore our fun and engaging programs built just for your little learners!</p>
+    <div class="cards">
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2016/03/27/07/08/kids-1280567_1280.jpg" alt="Playland" />
+        <h3>Playland & Cafe</h3>
+        <p>9:00am - 12:00pm | Mon - Sat</p>
+        <p>Learn through joy, stories, and safe online play environments.</p>
+        <a class="btn" href="#">Learn More</a>
+      </div>
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2017/09/25/13/12/kid-2784781_1280.jpg" alt="Shapes Match" />
+        <h3>Shapes Match</h3>
+        <p>9:00am - 12:00pm | Mon - Sat</p>
+        <p>Build early math and logic through shape sorting and games.</p>
+        <a class="btn" href="#">Learn More</a>
+      </div>
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2016/11/19/13/07/children-1839628_1280.jpg" alt="Color Match" />
+        <h3>Color Match</h3>
+        <p>9:00am - 12:00pm | Mon - Sat</p>
+        <p>Explore creativity and color concepts through drawing & play.</p>
+        <a class="btn" href="#">Learn More</a>
+      </div>
     </div>
   </section>
 
-  <footer id="contact">
-    <p>Contact us on WhatsApp: +91 89582 72149</p>
+  <footer>
     <p>&copy; 2025 BrightNest Edu. All rights reserved.</p>
+    <p>Contact us on WhatsApp: +91 89582 72149</p>
   </footer>
-
 </body>
 </html>
