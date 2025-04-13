@@ -5,239 +5,159 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BrightNest Edu — Where Young Minds Take Flight</title>
 
-  <!-- SEO Meta Tags for better search engine visibility -->
+  <!-- SEO Meta Tags -->
   <meta name="description" content="BrightNest Edu offers one-on-one online classes for kids aged 3–8 in Phonics, Maths, and Hindi. Fun, interactive, and personalized learning.">
-  <meta name="keywords" content="online classes for kids, phonics for kids, vedic math, Hindi for children, BrightNest Edu, early childhood learning">
-  <meta name="author" content="BrightNest Edu Team">
+  <meta name="keywords" content="online classes for kids, phonics for kids, vedic math, Hindi, kids education, BrightNest Edu">
+  <meta name="author" content="BrightNest Edu">
 
-  <!-- Open Graph Tags for social sharing enhancements -->
-  <meta property="og:title" content="BrightNest Edu — Where Young Minds Take Flight" />
-  <meta property="og:description" content="Fun and engaging online classes for kids aged 3 to 8 in Phonics, Maths, and Hindi. Enroll today!" />
-  <meta property="og:image" content="https://brightnestedu.online/images/preview.jpg" />
-  <meta property="og:url" content="https://brightnestedu.online/" />
-  <meta property="og:type" content="website" />
-
-  <!-- Favicon and app-related icons -->
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="BrightNest Edu" />
   <link rel="manifest" href="/site.webmanifest" />
 
-  <!-- Google Fonts: Poppins -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap" rel="stylesheet" />
 
   <style>
-    /* Color and design variables */
     :root {
-      --primary-color: #1a2b49;
-      --accent-color: #fbbf24;
+      --brand-primary: #1a2b49;
+      --brand-accent: #f9c5d1;
       --bg-light: #fefce8;
-      --button-color: #25d366;
-      --button-hover: #1ebe57;
+      --text-dark: #333;
+      --highlight: #ffe082;
     }
 
-    /* Reset and base styles */
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     body {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Fredoka', sans-serif;
       background-color: var(--bg-light);
-      color: var(--primary-color);
+      color: var(--text-dark);
       text-align: center;
-      padding: 40px 20px;
-      animation: fadeIn 1s ease-in-out; /* Fade-in on load */
+      padding: 20px;
     }
 
-    /* Header section with logo and title */
-    header {
+    .brand {
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 20px;
-      animation: slideDown 1.5s ease; /* Slide in animation */
-    }
-
-    .logo {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      border: 2px solid var(--primary-color);
-    }
-
-    h1 {
-      font-size: 2.5em;
-      font-weight: 700;
-    }
-
-    h2 {
-      font-size: 1.4em;
-      font-weight: 500;
-      font-style: italic;
-      color: #555;
-      margin-bottom: 30px;
-      animation: fadeIn 2s ease;
-    }
-
-    /* Button section styling */
-    .buttons {
-      margin-bottom: 40px;
-    }
-
-    .btn {
-      background-color: var(--button-color);
-      color: white;
-      padding: 12px 24px;
-      margin: 0 10px;
-      border: none;
-      border-radius: 8px;
-      font-size: 1em;
-      cursor: pointer;
-      font-weight: 600;
-      transition: background 0.3s, transform 0.3s;
-    }
-
-    .btn:hover {
-      background-color: var(--button-hover);
-      transform: translateY(-3px); /* Button lift on hover */
-    }
-
-    /* Key features list */
-    .features {
-      max-width: 600px;
-      margin: 0 auto 40px;
-      text-align: left;
-      animation: fadeInUp 1.5s ease; /* Animate from below */
-    }
-
-    .features li {
-      margin: 10px 0;
-      font-size: 1.1em;
-    }
-
-    /* How it works section */
-    .how-it-works {
-      background-color: #fff3cd;
-      padding: 30px;
-      border-radius: 10px;
-      margin-bottom: 40px;
-      animation: zoomIn 1.5s ease; /* Pop-in animation */
-    }
-
-    .how-it-works h3 {
-      font-weight: 600;
-      margin-bottom: 15px;
-    }
-
-    /* Testimonials */
-    .testimonial {
-      font-style: italic;
-      color: #444;
-      margin-bottom: 20px;
+      gap: 15px;
+      margin-top: 30px;
       animation: fadeIn 1.5s ease-in-out;
     }
 
-    /* Floating cartoon image */
-    .cartoon {
-      width: 180px;
-      margin: 30px auto;
-      display: block;
-      animation: float 3s ease-in-out infinite; /* Continuous float */
+    .brand img {
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      object-fit: contain;
     }
 
-    /* Animations */
+    h1 {
+      font-size: 2.5rem;
+      color: var(--brand-primary);
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      font-style: italic;
+      color: var(--brand-accent);
+      margin-top: 10px;
+      animation: slideIn 1.5s ease-in-out;
+    }
+
+    .features, .testimonials {
+      margin-top: 40px;
+    }
+
+    .feature, .testimonial {
+      background: var(--highlight);
+      border-radius: 15px;
+      padding: 20px;
+      margin: 10px auto;
+      max-width: 600px;
+      animation: bounceIn 1s ease-in-out;
+    }
+
+    .testimonial p {
+      font-style: italic;
+    }
+
+    .cartoon-img {
+      width: 100px;
+      height: auto;
+      margin-top: 20px;
+      animation: float 3s ease-in-out infinite;
+    }
+
     @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes slideDown {
-      from { opacity: 0; transform: translateY(-20px); }
+      from { opacity: 0; transform: translateY(-10px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+    @keyframes slideIn {
+      from { transform: translateX(-50px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
     }
 
-    @keyframes zoomIn {
-      from { transform: scale(0.95); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
+    @keyframes bounceIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
     }
 
     @keyframes float {
-      0% { transform: translateY(0); }
+      0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
-      100% { transform: translateY(0); }
-    }
-
-    /* Footer styling */
-    footer {
-      margin-top: 60px;
-      font-size: 0.9em;
-      color: #777;
-    }
-
-    /* Responsive adjustments for smaller screens */
-    @media (max-width: 768px) {
-      h1 { font-size: 2em; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Logo and brand header -->
-  <header>
-    <h1>BrightNest</h1>
-    <img src="brightnest-logo.png" alt="BrightNest Edu Logo" class="logo" />
-    <h1>Education</h1>
-  </header>
-
-  <!-- Tagline -->
-  <h2>"Where Young Minds Take Flight"</h2>
-
-  <!-- Decorative cartoon image -->
-  <img src="https://brightnestedu.online/images/kid-cartoon.png" alt="Cute cartoon of a learning child" class="cartoon" />
-
-  <!-- Action buttons -->
-  <div class="buttons">
-    <button class="btn">Enroll Now</button>
-    <button class="btn" onclick="window.open('https://wa.me/918958272149', '_blank')">WhatsApp Us</button>
+  <div class="brand">
+    <img src="brightnest-logo.png" alt="BrightNest Edu Logo">
+    <h1>BrightNest Education</h1>
   </div>
+  <h2>“Where Young Minds Take Flight”</h2>
 
-  <!-- Key offerings list -->
-  <ul class="features">
-    <li>1-on-1 live sessions</li>
-    <li>Designed by early childhood experts</li>
-    <li>Interactive activities and storytelling</li>
-    <li>Flexible timings for busy parents</li>
-  </ul>
+  <img src="cartoon-kid.png" alt="Happy Cartoon Kid" class="cartoon-img" />
 
-  <!-- Steps on how the platform works -->
-  <div class="how-it-works">
-    <h3>How It Works</h3>
-    <ol>
-      <li>Choose a subject</li>
-      <li>Meet your teacher</li>
-      <li>Start learning!</li>
-    </ol>
-  </div>
+  <section class="features">
+    <div class="feature">
+      <h3>🌟 One-on-One Live Classes</h3>
+      <p>Personalized attention for every child to grow confidently.</p>
+    </div>
+    <div class="feature">
+      <h3>📚 Subjects We Cover</h3>
+      <p>Phonics, Vedic Maths, and Hindi — all crafted for ages 3–8.</p>
+    </div>
+    <div class="feature">
+      <h3>🎨 Fun & Interactive Learning</h3>
+      <p>Games, stories, and colorful visuals to keep kids engaged!</p>
+    </div>
+  </section>
 
-  <!-- Testimonials section -->
-  <div class="testimonial">"My child started reading within weeks! Thank you BrightNest!" — A Happy Parent</div>
-  <div class="testimonial">"The sessions are fun and interactive. My son looks forward to every class!" — Priya, Mumbai</div>
-  <div class="testimonial">"BrightNest made learning Hindi so easy and enjoyable for my daughter." — Ravi, Delhi</div>
-  <div class="testimonial">"Excellent teachers and flexible timings! Perfect for working parents." — Sneha, Bengaluru</div>
-
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 BrightNest Edu. All rights reserved.
-  </footer>
+  <section class="testimonials">
+    <h3>💬 What Parents Say</h3>
+    <div class="testimonial">
+      <p>“My daughter now reads fluently at just 5 years! Thank you BrightNest!”</p>
+      <strong>– Anjali, Mumbai</strong>
+    </div>
+    <div class="testimonial">
+      <p>“The Vedic Math sessions were a game-changer. My son enjoys every class.”</p>
+      <strong>– Ravi, Bangalore</strong>
+    </div>
+    <div class="testimonial">
+      <p>“Affordable, fun, and truly personalized. I recommend it to every parent.”</p>
+      <strong>– Priya, Delhi</strong>
+    </div>
+  </section>
 
 </body>
 </html>
