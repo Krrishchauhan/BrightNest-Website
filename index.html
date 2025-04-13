@@ -128,12 +128,19 @@
 
     .courses {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
       gap: 2rem;
       margin: 3rem auto;
       max-width: 1200px;
       padding: 0 1rem;
+    }
+
+    .row {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
     }
 
     .course-card {
@@ -232,29 +239,11 @@
       0%, 100% { transform: scale(1); opacity: 1; }
       50% { transform: scale(1.1); opacity: 0.8; }
     }
-
-    @media (min-width: 1025px) {
-      .courses { justify-content: space-between; gap: 3rem; }
-      .course-card { width: 30%; }
-    }
-
-    @media (max-width: 600px) {
-      .rocket-img { width: 160px; }
-      .tagline { font-size: 1.5rem; }
-      .courses { flex-direction: column; align-items: center; gap: 1.5rem; }
-      .course-card { width: 90%; }
-    }
-
-    @media (min-width: 601px) and (max-width: 1024px) {
-      .course-card { width: 45%; }
-      .courses { justify-content: space-around; gap: 2rem; }
-    }
   </style>
 </head>
 <body>
   <div class="hero-section">
     <div class="sun"></div>
-
     <header>
       <img src="brightnest-logo.png" alt="BrightNest Logo" class="logo-img" />
       <h1>BrightNest <span>Edu</span></h1>
@@ -273,43 +262,50 @@
     <div class="wave"></div>
   </div>
 
+  <!-- 👇 Downward Pyramid Layout -->
   <section class="courses">
-    <div class="course-card">
-      <img src="phonics-icon.png" alt="Phonics Icon">
-      <h2>Beginners Level</h2>
-      <h4>Phonics</h4>
-      <h4>Mathematics</h4>
-      <p>Age: 3–4.5 years</p>
-      <p>Online | One-on-One</p>
+    <div class="row">
+      <div class="course-card">
+        <img src="phonics-icon.png" alt="Phonics Icon">
+        <h2>Beginners Level</h2>
+        <h4>Phonics</h4>
+        <h4>Mathematics</h4>
+        <p>Age: 3–4.5 years</p>
+        <p>Online | One-on-One</p>
+      </div>
     </div>
-    <div class="course-card">
-      <img src="phonics-icon.png" alt="Phonics Icon">
-      <h2>Junior Level</h2>
-      <h4>Phonics</h4>
-      <h4>Mathematics</h4>
-      <p>Age: 4.5-6 years</p>
-      <p>Online | One-on-One</p>
+    <div class="row">
+      <div class="course-card">
+        <img src="phonics-icon.png" alt="Phonics Icon">
+        <h2>Junior Level</h2>
+        <h4>Phonics</h4>
+        <h4>Mathematics</h4>
+        <p>Age: 4.5–6 years</p>
+        <p>Online | One-on-One</p>
+      </div>
+      <div class="course-card">
+        <img src="phonics-icon.png" alt="Phonics Icon">
+        <h2>Class 1–5</h2>
+        <h4>English</h4>
+        <h4>Mathematics</h4>
+        <p>Age: 6–11 years</p>
+        <p>Online | One-on-One</p>
+      </div>
     </div>
-    <div class="course-card">
-      <img src="phonics-icon.png" alt="Phonics Icon">
-      <h2>Class 1-5</h2>
-      <h4>English</h4>
-      <h4>Mathematics</h4>
-      <p>Age: 6-11 years</p>
-      <p>Online | One-on-One</p>
-    </div> 
-    <div class="course-card">
-      <img src="math-icon.png" alt="Math Icon">
-      <h3>Vedic Mathematics</h3>
-      <p>Age: Any age</p>
-      <p>Online | One-on-One</p>
-    </div>
-    <div class="course-card">
-      <img src="hindi-icon.png" alt="Hindi Icon">
-      <h2>Hindi</h2>
-      <h3>Basic Understanding</h3>
-      <p>Age: Any age</p>
-      <p>Online | One-on-One</p>
+    <div class="row">
+      <div class="course-card">
+        <img src="math-icon.png" alt="Math Icon">
+        <h3>Vedic Mathematics</h3>
+        <p>Age: Any age</p>
+        <p>Online | One-on-One</p>
+      </div>
+      <div class="course-card">
+        <img src="hindi-icon.png" alt="Hindi Icon">
+        <h2>Hindi</h2>
+        <h3>Basic Understanding</h3>
+        <p>Age: Any age</p>
+        <p>Online | One-on-One</p>
+      </div>
     </div>
   </section>
 
