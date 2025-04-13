@@ -31,7 +31,6 @@
       padding: 0;
     }
 
-    /* Hero Section with Cloud Background */
     .hero-section {
       position: relative;
       background: #cceaff;
@@ -56,7 +55,7 @@
                   radial-gradient(circle at 80% 60%, #fff 30%, transparent 31%);
       background-repeat: no-repeat;
       background-size: 25% 100%;
-      animation: moveClouds 60s linear infinite;
+      animation: moveClouds 90s linear infinite;
       opacity: 0.8;
       z-index: 1;
     }
@@ -92,6 +91,13 @@
       margin: 2rem auto 1rem;
       position: relative;
       z-index: 3;
+      animation: floatRocket 4s ease-in-out infinite;
+    }
+
+    @keyframes floatRocket {
+      0%   { transform: translateY(0px); }
+      50%  { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
     }
 
     .tagline {
@@ -150,8 +156,7 @@
       margin-bottom: 1rem;
     }
 
-    .course-card h3 {
-      font-size: 1.2rem;
+    .course-card h3, .course-card h4, .course-card h2 {
       margin-bottom: 0.5rem;
     }
 
@@ -170,61 +175,97 @@
       z-index: 1000;
     }
 
-    /* Laptop/Desktop */
-    @media (min-width: 1025px) {
-      body {
-        padding: 0;
-      }
+    .sparkle-container {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 2;
+    }
 
+    .sparkle {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: sparkleAnim 2s ease-in-out infinite;
+    }
+
+    .sparkle:nth-child(1) { top: -30px; left: -20px; animation-delay: 0s; }
+    .sparkle:nth-child(2) { top: -10px; left: 30px; animation-delay: 1s; }
+    .sparkle:nth-child(3) { top: 20px; left: -10px; animation-delay: 2s; }
+
+    @keyframes sparkleAnim {
+      0%, 100% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.5); opacity: 0.3; }
+    }
+
+    .wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 200%;
+      height: 100px;
+      background: radial-gradient(ellipse at 50% 50%, #fff 30%, transparent 70%);
+      background-size: 50% 100%;
+      animation: waveAnim 10s linear infinite;
+      z-index: 1;
+      opacity: 0.4;
+    }
+
+    @keyframes waveAnim {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .sun {
+      position: absolute;
+      top: 40px;
+      left: 30px;
+      width: 60px;
+      height: 60px;
+      background: radial-gradient(circle, #ffe066, #ffb347);
+      border-radius: 50%;
+      box-shadow: 0 0 15px #ffb347;
+      animation: pulseSun 5s ease-in-out infinite;
+      z-index: 3;
+    }
+
+    @keyframes pulseSun {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.1); opacity: 0.8; }
+    }
+
+    @media (min-width: 1025px) {
       .courses {
         justify-content: space-between;
         gap: 3rem;
       }
-
       .course-card {
         width: 30%;
       }
     }
 
-    /* Mobile */
     @media (max-width: 600px) {
-      .rocket-img {
-        width: 160px;
-      }
-
-      .tagline {
-        font-size: 1.5rem;
-      }
-
-      .courses {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-      }
-
-      .course-card {
-        width: 90%;
-      }
+      .rocket-img { width: 160px; }
+      .tagline { font-size: 1.5rem; }
+      .courses { flex-direction: column; align-items: center; gap: 1.5rem; }
+      .course-card { width: 90%; }
     }
 
-    /* Tablet */
     @media (min-width: 601px) and (max-width: 1024px) {
-      .course-card {
-        width: 45%;
-      }
-
-      .courses {
-        justify-content: space-around;
-        gap: 2rem;
-      }
+      .course-card { width: 45%; }
+      .courses { justify-content: space-around; gap: 2rem; }
     }
   </style>
 </head>
 <body>
-
-  <!-- Hero Section with Clouds and Logo -->
   <div class="hero-section">
     <div class="cloud-layer"></div>
+    <div class="sun"></div>
 
     <header>
       <img src="brightnest-logo.png" alt="BrightNest Logo" class="logo-img" />
@@ -232,12 +273,18 @@
     </header>
 
     <img src="rocket-kid.png" alt="Rocket Kid" class="rocket-img" />
+    <div class="sparkle-container">
+      <div class="sparkle"></div>
+      <div class="sparkle"></div>
+      <div class="sparkle"></div>
+    </div>
+
     <h2 class="tagline">Where Young Minds Take Flight</h2>
     <p class="subtext">BrightNest Edu offers interactive, one-on-one online classes for ages 3–11 in Phonics, English, Mathematics, and Hindi.</p>
     <a href="https://wa.me/918958272149" class="whatsapp-btn">Chat on Whatsapp</a>
+    <div class="wave"></div>
   </div>
 
-  <!-- Courses Section -->
   <section class="courses">
     <div class="course-card">
       <img src="phonics-icon.png" alt="Phonics Icon">
@@ -278,10 +325,18 @@
     </div>
   </section>
 
-  <!-- Floating WhatsApp Icon -->
   <a href="https://wa.me/918958272149">
     <img src="whatsapp-icon.png" class="whatsapp-icon" alt="WhatsApp" />
   </a>
 
+  <audio id="chirping" loop autoplay>
+    <source src="chirping.mp3" type="audio/mpeg">
+  </audio>
+  <script>
+    window.addEventListener("click", () => {
+      const sound = document.getElementById("chirping");
+      if (sound.paused) sound.play();
+    });
+  </script>
 </body>
 </html>
