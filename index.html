@@ -2,32 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>BrightNest Edu — Where Young Minds Take Flight</title>
-
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="BrightNest Edu offers one-on-one online classes for kids aged 3–8 in Phonics, Maths, and Hindi. Fun, interactive, and personalized learning.">
-  <meta name="keywords" content="online classes for kids, phonics for kids, vedic math, Hindi, kids education, BrightNest Edu">
-  <meta name="author" content="BrightNest Edu">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <meta name="apple-mobile-web-app-title" content="BrightNest Edu" />
-  <link rel="manifest" href="/site.webmanifest" />
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap" rel="stylesheet" />
-
+  <meta name="description" content="BrightNest Edu offers online classes for kids aged 3–8 in Phonics, Vedic Math, and Hindi.">
+  <meta name="keywords" content="online kids classes, phonics, vedic math, Hindi for kids">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+  <link rel="icon" type="image/png" href="favicon-96x96.png"/>
   <style>
     :root {
-      --brand-primary: #1a2b49;
-      --brand-accent: #f9c5d1;
-      --bg-light: #fefce8;
-      --text-dark: #333;
-      --highlight: #ffe082;
+      --navy: #1a2b49;
+      --pink: #ffd1dc;
+      --bg: #fefce8;
+      --accent: #fbbf24;
     }
 
     * {
@@ -37,127 +23,155 @@
     }
 
     body {
-      font-family: 'Fredoka', sans-serif;
-      background-color: var(--bg-light);
-      color: var(--text-dark);
-      text-align: center;
-      padding: 20px;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg);
+      color: #333;
     }
 
-    .brand {
+    header {
+      background-color: var(--navy);
+      color: white;
+      padding: 1rem 2rem;
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 30px;
-      animation: fadeIn 1.5s ease-in-out;
     }
 
-    .brand img {
-      height: 80px;
-      width: 80px;
+    header img {
+      height: 50px;
       border-radius: 50%;
-      object-fit: contain;
     }
 
-    h1 {
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, var(--pink), var(--accent));
+    }
+
+    .hero h1 {
       font-size: 2.5rem;
-      color: var(--brand-primary);
+      color: var(--navy);
+      margin-bottom: 1rem;
     }
 
-    h2 {
+    .hero p {
+      font-style: italic;
       font-size: 1.2rem;
-      font-style: italic;
-      color: var(--brand-accent);
-      margin-top: 10px;
-      animation: slideIn 1.5s ease-in-out;
+      margin-bottom: 2rem;
     }
 
-    .features, .testimonials {
-      margin-top: 40px;
+    .btn {
+      background-color: var(--navy);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
     }
 
-    .feature, .testimonial {
-      background: var(--highlight);
-      border-radius: 15px;
-      padding: 20px;
-      margin: 10px auto;
-      max-width: 600px;
-      animation: bounceIn 1s ease-in-out;
+    .courses {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 3rem 2rem;
     }
 
-    .testimonial p {
-      font-style: italic;
+    .course-card {
+      background-color: white;
+      border-radius: 12px;
+      padding: 2rem;
+      width: 300px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
     }
 
-    .cartoon-img {
-      width: 100px;
-      height: auto;
-      margin-top: 20px;
-      animation: float 3s ease-in-out infinite;
+    .course-card h3 {
+      color: var(--navy);
+      margin-bottom: 0.5rem;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-10px); }
-      to { opacity: 1; transform: translateY(0); }
+    .course-card p {
+      margin: 0.5rem 0;
     }
 
-    @keyframes slideIn {
-      from { transform: translateX(-50px); opacity: 0; }
-      to { transform: translateX(0); opacity: 1; }
+    .whatsapp {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: #25D366;
+      color: white;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
     }
 
-    @keyframes bounceIn {
-      0% { transform: scale(0.8); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: var(--navy);
+      color: white;
+      margin-top: 3rem;
     }
   </style>
 </head>
 <body>
 
-  <div class="brand">
-    <img src="brightnest-logo.png" alt="BrightNest Edu Logo">
-    <h1>BrightNest Education</h1>
-  </div>
-  <h2>“Where Young Minds Take Flight”</h2>
-
-  <img src="cartoon-kid.png" alt="Happy Cartoon Kid" class="cartoon-img" />
-
-  <section class="features">
-    <div class="feature">
-      <h3>🌟 One-on-One Live Classes</h3>
-      <p>Personalized attention for every child to grow confidently.</p>
+  <header>
+    <div class="brand">
+      <img src="brightnest-logo.png" alt="BrightNest Logo">
     </div>
-    <div class="feature">
-      <h3>📚 Subjects We Cover</h3>
-      <p>Phonics, Vedic Maths, English and Hindi — all crafted for ages 3–15.</p>
+    <nav>
+      <a href="#courses">Courses</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Where Young Minds Take Flight</h1>
+    <p>BrightNest Edu offers interactive, one-on-one online classes for ages 3–8 in Phonics, Math, and Hindi.</p>
+    <a class="btn" href="https://wa.me/918958272149?text=Hello%2C%20I%20want%20to%20enroll%20my%20child">Chat on WhatsApp</a>
+  </section>
+
+  <section id="courses" class="courses">
+    <div class="course-card">
+      <h3>Phonics Fun</h3>
+      <p>Age: 3–6 years</p>
+      <p>Mon–Sat, 9:00am – 12:00pm</p>
+      <p>Online | One-on-One</p>
+      <a class="whatsapp" href="https://wa.me/918958272149?text=I'm%20interested%20in%20Phonics%20classes%20on%20BrightNest%20Edu">Enroll Now</a>
     </div>
-    <div class="feature">
-      <h3>🎨 Fun & Interactive Learning</h3>
-      <p>Games, stories, and colorful visuals to keep kids engaged!</p>
+
+    <div class="course-card">
+      <h3>Vedic Math Magic</h3>
+      <p>Age: 4–8 years</p>
+      <p>Mon–Sat, 12:30pm – 2:30pm</p>
+      <p>Online | One-on-One</p>
+      <a class="whatsapp" href="https://wa.me/918958272149?text=I'm%20interested%20in%20Vedic%20Math%20classes%20on%20BrightNest%20Edu">Enroll Now</a>
+    </div>
+
+    <div class="course-card">
+      <h3>Hindi Express</h3>
+      <p>Age: 3–8 years</p>
+      <p>Mon–Sat, 3:00pm – 5:00pm</p>
+      <p>Online | One-on-One</p>
+      <a class="whatsapp" href="https://wa.me/918958272149?text=I'm%20interested%20in%20Hindi%20classes%20on%20BrightNest%20Edu">Enroll Now</a>
     </div>
   </section>
 
-  <section class="testimonials">
-    <h3>💬 What Parents Say</h3>
-    <div class="testimonial">
-      <p>“My daughter now reads fluently at just 5 years! Thank you BrightNest!”</p>
-      <strong>– Anjali, Mumbai</strong>
-    </div>
-    <div class="testimonial">
-      <p>“The Vedic Math sessions were a game-changer. My son enjoys every class.”</p>
-      <strong>– Ravi, Bangalore</strong>
-    </div>
-    <div class="testimonial">
-      <p>“Affordable, fun, and truly personalized. I recommend it to every parent.”</p>
-      <strong>– Priya, Delhi</strong>
-    </div>
-  </section>
+  <footer id="contact">
+    <p>Contact us on WhatsApp: +91 89582 72149</p>
+    <p>&copy; 2025 BrightNest Edu. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
