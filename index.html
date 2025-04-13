@@ -167,16 +167,13 @@
     .whatsapp-btn {
       background-color: var(--primary);
       color: #fff;
-      padding: 0.75rem 1.5rem;
-      border-radius: 30px;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
       text-decoration: none;
       font-weight: bold;
       display: inline-block;
-      margin: 1rem auto;
-      position: relative;
-      z-index: 3;
-      max-width: 160px;
-      width: 90%;
+      margin-top: 1rem;
+      font-size: 0.9rem;
     }
 
     .courses {
@@ -220,79 +217,6 @@
       color: #333;
     }
 
-    .whatsapp-icon {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 50px;
-      height: 50px;
-      z-index: 1000;
-    }
-
-    .sparkle-container {
-      position: absolute;
-      top: 45%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-      z-index: 2;
-    }
-
-    .sparkle {
-      position: absolute;
-      width: 8px;
-      height: 8px;
-      background: white;
-      border-radius: 50%;
-      opacity: 0.8;
-      animation: sparkleAnim 2s ease-in-out infinite;
-    }
-
-    .sparkle:nth-child(1) { top: -30px; left: -20px; animation-delay: 0s; }
-    .sparkle:nth-child(2) { top: -10px; left: 30px; animation-delay: 1s; }
-    .sparkle:nth-child(3) { top: 20px; left: -10px; animation-delay: 2s; }
-
-    @keyframes sparkleAnim {
-      0%, 100% { transform: scale(1); opacity: 0.8; }
-      50% { transform: scale(1.5); opacity: 0.3; }
-    }
-
-    .wave {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 200%;
-      height: 100px;
-      background: radial-gradient(ellipse at 50% 50%, #fff 30%, transparent 70%);
-      background-size: 50% 100%;
-      animation: waveAnim 10s linear infinite;
-      z-index: 1;
-      opacity: 0.4;
-    }
-
-    @keyframes waveAnim {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-
-    .sun {
-      position: absolute;
-      top: 40px;
-      left: 30px;
-      width: 60px;
-      height: 60px;
-      background: radial-gradient(circle, #ffe066, #ffb347);
-      border-radius: 50%;
-      box-shadow: 0 0 15px #ffb347;
-      animation: pulseSun 5s ease-in-out infinite;
-      z-index: 3;
-    }
-
-    @keyframes pulseSun {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.1); opacity: 0.8; }
-    }
-
     .book-demo-btn {
       position: fixed;
       top: 50%;
@@ -315,6 +239,15 @@
     .book-demo-btn:hover {
       background-color: #da4ef5;
       color: #fff;
+    }
+
+    .whatsapp-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      z-index: 1000;
     }
   </style>
 </head>
@@ -340,18 +273,12 @@
     </header>
 
     <img src="rocket-kid.png" alt="Rocket Kid" class="rocket-img" />
-    <div class="sparkle-container">
-      <div class="sparkle"></div>
-      <div class="sparkle"></div>
-      <div class="sparkle"></div>
-    </div>
-
     <h2 class="tagline">Where Young Minds Take Flight</h2>
     <p class="subtext">BrightNest Edu offers interactive, one-on-one online classes for ages 3–11 in Phonics, English, Mathematics, and Hindi.</p>
     <a href="https://wa.me/918958272149" class="whatsapp-btn">Chat on Whatsapp</a>
-    <div class="wave"></div>
   </div>
- <section class="courses">
+
+  <section class="courses" id="courses">
     <div class="row">
       <div class="course-card">
         <img src="phonics-icon.png" alt="Phonics Icon">
@@ -360,6 +287,7 @@
         <h4>Mathematics</h4>
         <p>Age: 3–4.5 years</p>
         <p>Online | One-on-One</p>
+        <a href="https://wa.me/918958272149?text=Hi! I want to enroll in the Beginners Level at BrightNest Edu." class="whatsapp-btn">Enroll Now</a>
       </div>
     </div>
     <div class="row">
@@ -370,6 +298,7 @@
         <h4>Mathematics</h4>
         <p>Age: 4.5–6 years</p>
         <p>Online | One-on-One</p>
+        <a href="https://wa.me/918958272149?text=Hi! I want to enroll in the Junior Level at BrightNest Edu." class="whatsapp-btn">Enroll Now</a>
       </div>
       <div class="course-card">
         <img src="phonics-icon.png" alt="Phonics Icon">
@@ -378,6 +307,7 @@
         <h4>Mathematics</h4>
         <p>Age: 6–11 years</p>
         <p>Online | One-on-One</p>
+        <a href="https://wa.me/918958272149?text=Hi! I want to enroll in Class 1–5 at BrightNest Edu." class="whatsapp-btn">Enroll Now</a>
       </div>
     </div>
     <div class="row">
@@ -386,6 +316,7 @@
         <h3>Vedic Mathematics</h3>
         <p>Age: Any age</p>
         <p>Online | One-on-One</p>
+        <a href="https://wa.me/918958272149?text=Hi! I want to enroll in Vedic Mathematics at BrightNest Edu." class="whatsapp-btn">Enroll Now</a>
       </div>
       <div class="course-card">
         <img src="hindi-icon.png" alt="Hindi Icon">
@@ -393,6 +324,7 @@
         <h3>Basic Understanding</h3>
         <p>Age: Any age</p>
         <p>Online | One-on-One</p>
+        <a href="https://wa.me/918958272149?text=Hi! I want to enroll in Hindi at BrightNest Edu." class="whatsapp-btn">Enroll Now</a>
       </div>
     </div>
   </section>
@@ -405,7 +337,6 @@
   <section id="contact">
     <h2>Contact Us</h2>
     <p>Email us at: contact@brightnestedu.online</p>
-    <p>WhatsApp on : +91-8958272149</p>
   </section>
 
   <a href="https://wa.me/918958272149?text=Hi! I want to book a demo class for my child." class="book-demo-btn" target="_blank">
