@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<!-- HOMEPAGE CODE HERE (use actual code from earlier message or replace with placeholder) -->
-<html><head><title>BrightNest Edu</title></head><body>Homepage</body></html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>BrightNest Edu — Where Young Minds Take Flight</title>
-  <meta name="description" content="BrightNest Edu offers online classes for kids aged 3–8 in Phonics, Vedic Math, and Hindi.">
-  <meta name="keywords" content="online kids classes, phonics, vedic math, Hindi for kids">
+
+  <!-- SEO -->
+  <meta name="description" content="BrightNest Edu offers online classes for kids aged 3–15 in Phonics, English, Vedic Math, and Hindi.">
+  <meta name="keywords" content="online kids classes, phonics, english, vedic math, Hindi for kids">
+
+  <!-- Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
-  <link rel="icon" type="image/png" href="favicon-96x96.png"/>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+
   <style>
     :root {
       --navy: #1a2b49;
@@ -69,6 +78,12 @@
       margin-bottom: 2rem;
     }
 
+    .hero img {
+      width: 140px;
+      margin: 1rem 0;
+      animation: float 3s ease-in-out infinite;
+    }
+
     .btn {
       background-color: var(--navy);
       color: white;
@@ -124,6 +139,11 @@
       color: white;
       margin-top: 3rem;
     }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
   </style>
 </head>
 <body>
@@ -140,31 +160,63 @@
 
   <section class="hero">
     <h1>Where Young Minds Take Flight</h1>
-    <p>BrightNest Edu offers interactive, one-on-one online classes for ages 3–8 in Phonics, Math, and Hindi.</p>
+    <p>BrightNest Edu offers interactive, one-on-one online classes for ages 3–15 in Phonics, English, Math, and Hindi.</p>
+
+    <!-- 👦 Cartoon Kid Image -->
+    <img src="https://cdn.pixabay.com/photo/2020/05/18/22/28/kid-5190870_960_720.png" alt="Happy Cartoon Kid" />
+
+    <br/>
     <a class="btn" href="https://wa.me/918958272149?text=Hello%2C%20I%20want%20to%20enroll%20my%20child">Chat on WhatsApp</a>
   </section>
 
   <section id="courses" class="courses">
     <div class="course-card">
-      <h3>Phonics Fun</h3>
-      <p>Age: 3–6 years</p>
-      <p>Mon–Sat, 9:00am – 12:00pm</p>
+      <h6>Beginners Phonics </h6>
+      <h3>English</h3>
+      <h3>Mathematics</h3>
+      <p>Age: 3-4 </p>
+      <p>Online | One-on-One</p>
+      <a class="whatsapp" href="https://wa.me/918958272149?text=I'm%20interested%20in%20Phonics%20classes%20on%20BrightNest%20Edu">Enroll Now</a>
+    </div>
+    
+    <div class="course-card">
+      <h6>Junior Phonics </h6>
+      <h3>English</h3>
+      <h3>Mathematics</h3>
+      <p>Age: 4-6 </p>
       <p>Online | One-on-One</p>
       <a class="whatsapp" href="https://wa.me/918958272149?text=I'm%20interested%20in%20Phonics%20classes%20on%20BrightNest%20Edu">Enroll Now</a>
     </div>
 
     <div class="course-card">
-      <h3>Vedic Math Magic</h3>
-      <p>Age: 4–8 years</p>
-      <p>Mon–Sat, 12:30pm – 2:30pm</p>
+      <h6>Class 1-5</h6>
+      <h3>English</h3>
+      <h3>Mathematics</h3>
+      <p>Age: 6-11 </p>
       <p>Online | One-on-One</p>
       <a class="whatsapp" href="https://wa.me/918958272149?text=I'm%20interested%20in%20Vedic%20Math%20classes%20on%20BrightNest%20Edu">Enroll Now</a>
     </div>
-
+    
     <div class="course-card">
-      <h3>Hindi Express</h3>
-      <p>Age: 3–8 years</p>
-      <p>Mon–Sat, 3:00pm – 5:00pm</p>
+      <h6>Class 6-8</h6>
+      <h3>English</h3>
+      <h3>Mathematics</h3>
+      <p>Age: 11-15 </p>
+      <p>Online | One-on-One</p>
+      <a class="whatsapp" href="https://wa.me/918958272149?text=I'm%20interested%20in%20Vedic%20Math%20classes%20on%20BrightNest%20Edu">Enroll Now</a>
+    </div>
+    
+    <div class="course-card">
+      <h3>Vedic Math Magic</h3>
+      <p>Age: Any Age </p>
+      <p>Online | One-on-One</p>
+      <a class="whatsapp" href="https://wa.me/918958272149?text=I'm%20interested%20in%20Vedic%20Math%20classes%20on%20BrightNest%20Edu">Enroll Now</a>
+    </div>
+        
+    <div class="course-card">
+      <h6>Hindi</h6>
+      <h3>Basic Understanding </h3>
+      <p>Age: Any Age years</p>
       <p>Online | One-on-One</p>
       <a class="whatsapp" href="https://wa.me/918958272149?text=I'm%20interested%20in%20Hindi%20classes%20on%20BrightNest%20Edu">Enroll Now</a>
     </div>
