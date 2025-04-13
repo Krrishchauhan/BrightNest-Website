@@ -39,36 +39,48 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-size: 1.6rem;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     nav a {
       color: var(--white);
-      margin-left: 20px;
+      margin: 0 10px;
       text-decoration: none;
       font-weight: bold;
+      padding: 0.5rem 0;
     }
 
     .hero {
       background: #c8e6f9;
       text-align: center;
       padding: 4rem 2rem;
-      position: relative;
     }
 
     .hero h1 {
-      font-size: 2.8rem;
+      font-size: 2.2rem;
       color: var(--blue-dark);
     }
 
     .hero p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: #444;
       max-width: 600px;
       margin: 1rem auto;
     }
 
     .hero img {
-      width: 300px;
+      width: 280px;
+      max-width: 100%;
       margin-top: 2rem;
     }
 
@@ -136,6 +148,36 @@
       color: #fff;
       padding: 2rem;
       text-align: center;
+    }
+
+    /* 🌐 Mobile Responsive Fix */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+      }
+
+      nav a {
+        margin: 5px 0;
+      }
+
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .section h2 {
+        font-size: 1.5rem;
+      }
+
+      .card {
+        width: 100%;
+      }
     }
   </style>
 </head>
