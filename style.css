@@ -1,21 +1,212 @@
-body {
-  margin: 0;
-  font-family: 'Fredoka', sans-serif;
-  background: linear-gradient(to bottom, #a3d7ff 0%, #ffffff 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+:root {
+  --primary: #ffb347;
+  --navy: #1a2b49;
+  --bg: #fffbed;
+  --blue: #0091ff;
 }
 
-.hero {
-  padding: 20px;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Fredoka', sans-serif;
+  background-color: var(--bg);
+  color: var(--navy);
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 0;
+}
+
+/* Hero Section with Cloud Background */
+.hero-section {
+  position: relative;
+  background: #cceaff;
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+  padding: 2rem 1rem 4rem;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.cloud-layer::before,
+.cloud-layer::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200px;
+  top: 0;
+  left: 0;
+  background: radial-gradient(circle at 20% 40%, #fff 30%, transparent 31%),
+              radial-gradient(circle at 40% 60%, #fff 30%, transparent 31%),
+              radial-gradient(circle at 60% 40%, #fff 30%, transparent 31%),
+              radial-gradient(circle at 80% 60%, #fff 30%, transparent 31%);
+  background-repeat: no-repeat;
+  background-size: 25% 100%;
+  animation: moveClouds 60s linear infinite;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+@keyframes moveClouds {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.logo-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 3;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  position: relative;
+  z-index: 3;
+}
+
+header h1 span {
+  color: var(--primary);
+}
+
+.rocket-img {
+  width: 200px;
+  margin: 2rem auto 1rem;
+  position: relative;
+  z-index: 3;
+}
+
+.tagline {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  position: relative;
+  z-index: 3;
+}
+
+.subtext {
+  max-width: 600px;
+  margin: 1rem auto;
+  font-size: 1.1rem;
+  color: #444;
+  position: relative;
+  z-index: 3;
+}
+
+.whatsapp-btn {
+  background-color: var(--primary);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin: 1rem auto;
+  position: relative;
+  z-index: 3;
+  max-width: 160px;
+  width: 90%;
+}
+
+.courses {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+.course-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  width: 280px;
   text-align: center;
 }
 
-.poster {
-  max-width: 100%;
-  height: auto;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+.course-card img {
+  width: 50px;
+  margin-bottom: 1rem;
+}
+
+.course-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.course-card p {
+  font-size: 0.95rem;
+  margin: 0.25rem 0;
+  color: #333;
+}
+
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  z-index: 1000;
+}
+
+/* Laptop/Desktop */
+@media (min-width: 1025px) {
+  body {
+    padding: 0;
+  }
+
+  .courses {
+    justify-content: space-between;
+    gap: 3rem;
+  }
+
+  .course-card {
+    width: 30%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .rocket-img {
+    width: 160px;
+  }
+
+  .tagline {
+    font-size: 1.5rem;
+  }
+
+  .courses {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .course-card {
+    width: 90%;
+  }
+}
+
+/* Tablet */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .course-card {
+    width: 45%;
+  }
+
+  .courses {
+    justify-content: space-around;
+    gap: 2rem;
+  }
 }
