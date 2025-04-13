@@ -28,7 +28,6 @@
       display: flex;
       flex-direction: column;
       justify-content: start;
-      padding: 0;
     }
 
     .hero-section {
@@ -41,26 +40,21 @@
       z-index: 1;
     }
 
-    .cloud-layer::before,
-    .cloud-layer::after {
+    .hero-section::before {
       content: "";
       position: absolute;
-      width: 200%;
-      height: 200px;
       top: 0;
       left: 0;
-      background: radial-gradient(circle at 20% 40%, #fff 30%, transparent 31%),
-                  radial-gradient(circle at 40% 60%, #fff 30%, transparent 31%),
-                  radial-gradient(circle at 60% 40%, #fff 30%, transparent 31%),
-                  radial-gradient(circle at 80% 60%, #fff 30%, transparent 31%);
-      background-repeat: no-repeat;
-      background-size: 25% 100%;
-      animation: moveClouds 90s linear infinite;
-      opacity: 0.8;
-      z-index: 1;
+      width: 200%;
+      height: 100%;
+      background: url('2025-04-13T17-20-13.330Z.png') repeat-x;
+      background-size: contain;
+      animation: cloudScroll 60s linear infinite;
+      opacity: 0.3;
+      z-index: 0;
     }
 
-    @keyframes moveClouds {
+    @keyframes cloudScroll {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
@@ -240,13 +234,8 @@
     }
 
     @media (min-width: 1025px) {
-      .courses {
-        justify-content: space-between;
-        gap: 3rem;
-      }
-      .course-card {
-        width: 30%;
-      }
+      .courses { justify-content: space-between; gap: 3rem; }
+      .course-card { width: 30%; }
     }
 
     @media (max-width: 600px) {
@@ -264,7 +253,6 @@
 </head>
 <body>
   <div class="hero-section">
-    <div class="cloud-layer"></div>
     <div class="sun"></div>
 
     <header>
@@ -288,25 +276,25 @@
   <section class="courses">
     <div class="course-card">
       <img src="phonics-icon.png" alt="Phonics Icon">
-      <h2>Beginners Level </h2>
-      <h4>Phonics </h4>
-      <h4>Mathematics </h4>
+      <h2>Beginners Level</h2>
+      <h4>Phonics</h4>
+      <h4>Mathematics</h4>
       <p>Age: 3–4.5 years</p>
       <p>Online | One-on-One</p>
     </div>
     <div class="course-card">
       <img src="phonics-icon.png" alt="Phonics Icon">
-      <h2>Junior Level </h2>
-      <h4>Phonics </h4>
-      <h4>Mathematics </h4>
+      <h2>Junior Level</h2>
+      <h4>Phonics</h4>
+      <h4>Mathematics</h4>
       <p>Age: 4.5-6 years</p>
       <p>Online | One-on-One</p>
     </div>
     <div class="course-card">
       <img src="phonics-icon.png" alt="Phonics Icon">
-      <h2>Class 1-5 </h2>
-      <h4>English </h4>
-      <h4>Mathematics </h4>
+      <h2>Class 1-5</h2>
+      <h4>English</h4>
+      <h4>Mathematics</h4>
       <p>Age: 6-11 years</p>
       <p>Online | One-on-One</p>
     </div> 
@@ -330,7 +318,7 @@
   </a>
 
   <audio id="chirping" loop autoplay>
-    <source src="chirping.mp3" type="audio/mpeg">
+    <source src="soft-pleasant-bird-chirping.mp3" type="audio/mpeg">
   </audio>
   <script>
     window.addEventListener("click", () => {
