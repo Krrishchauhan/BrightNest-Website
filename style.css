@@ -93,6 +93,24 @@ header h1 span {
   position: relative;
   z-index: 3;
 }
+.sun {
+  position: absolute;
+  top: 40px;
+  left: 30px;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, #ffe066, #ffb347);
+  border-radius: 50%;
+  box-shadow: 0 0 15px #ffb347;
+  animation: pulseSun 5s ease-in-out infinite;
+  z-index: 3;
+}
+
+@keyframes pulseSun {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+}
+
 
 .subtext {
   max-width: 600px;
