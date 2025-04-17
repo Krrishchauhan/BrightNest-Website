@@ -93,6 +93,7 @@ header h1 span {
   position: relative;
   z-index: 3;
 }
+
 .sun {
   position: absolute;
   top: 40px;
@@ -110,7 +111,6 @@ header h1 span {
   0%, 100% { transform: scale(1); opacity: 1; }
   50% { transform: scale(1.1); opacity: 0.8; }
 }
-
 
 .subtext {
   max-width: 600px;
@@ -226,5 +226,24 @@ header h1 span {
   .courses {
     justify-content: space-around;
     gap: 2rem;
+  }
+}
+
+/* === Sticky “Book My Demo” button (all devices) === */
+#book-demo-button {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 1000;
+  display: block;
+  /* you can add your button’s styling here */
+}
+
+/* === Override to keep it visible on tablet & mobile === */
+@media only screen and (max-width: 1024px) {
+  #book-demo-button {
+    display: block !important;
+    bottom: 20px;
+    right: 20px;
   }
 }
